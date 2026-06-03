@@ -35,11 +35,13 @@ export default async function NewsPage({
   const { category } = await searchParams
   const payload = await getPayload({ config: await config })
 
-  const { docs: articles } = await payload.find({
+  const { docs: allArticles } = await payload.find({
     collection: 'news',
     sort: '-publishedAt',
     where: category ? { category: { equals: category } } : undefined,
   }) as { docs: News[] }
+
+  const articles = allArticles.filter((a) => a.slug)
 
   return (
     <>

@@ -201,6 +201,9 @@ export interface Media {
 export interface News {
   id: number;
   title: string;
+  /**
+   * Хоосон үлдвэл гарчгаас автоматаар үүснэ
+   */
   slug?: string | null;
   content?: {
     root: {
