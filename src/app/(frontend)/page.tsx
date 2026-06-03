@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 
-export const revalidate = 60
+export const dynamic = 'force-dynamic'
 import Link from 'next/link'
 import { getPayload } from 'payload'
 import config from '@/payload.config'

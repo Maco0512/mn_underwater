@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 
-export const revalidate = 60
+export const dynamic = 'force-dynamic'
 import { getPayload } from 'payload'
 import { RichText } from '@payloadcms/richtext-lexical/react'
 import config from '@/payload.config'
